@@ -202,6 +202,8 @@ LECTURESID LECTURES_NAME              STID COURSE_NAME
        304 Joshua                     2002 Net
 
 #screenshot
+![lectures](https://github.com/user-attachments/assets/8e2f6749-5790-4a92-b754-06a47871179c)
+
 
 Table created.
 SQL> create table course1(courseName varchar(10) primary key , periods varchar(20), StId number(4), lectureseId number(4) ,foreign key (StId) references student1(StId));
@@ -249,12 +251,38 @@ COURSENAME PERIODS                    STID LECTURESEID
  pl        4-periods                  2000         100
  pl1       4-periods                  2001         101
  pl2       4-periods                  2002         101
-joining 
+
+##joining 
 by inner joining student and departement
+
+
 SELECT Student1.StId, Student1.Name, department1.DeptId, department1.lecturesId
 FROM Student1
 INNER JOIN department1
 ON Student1.DeptId = department1.DeptId;
+SQL> SELECT 
+  2    s.StId,
+  3    s.Name,
+  4    l.lectures_name,
+  5    l.course_name,
+  6    c.courseName,
+  7    c.periods
+  8  FROM 
+  9    student1 s
+ 10  INNER JOIN 
+ 11    lectures1 l ON s.StId = l.StId
+ 12  INNER JOIN 
+ 13    course1 c ON s.StId = c.StId;
+
+    StId Name                lectures_name     course_name       courseName   periods   
+  ------ ------------------- ----------------- ----------------- ----------- ----------- 
+   1001 John                Math 101         Algebra           Algebra      10 weeks    
+   1002 Alice               Physics 101      Mechanics         Mechanics    12 weeks    
+   1003 Robert              Chemistry 101    Organic Chemistry  Organic      8 weeks
+
+
+##Cross joining: i joined lectures and course 1 by cross joining
+
 
 SQL> SELECT *FROM lectures1 CROSS JOIN course1;
 
@@ -494,6 +522,28 @@ PERIODS                    STID LECTURESEID
 
 
 50 rows selected.
+
+# by left join i joined student1 left join to lectures1
+SQL> SELECT 
+  2    s.StId,
+  3    s.Name,
+  4    l.lectures_name,
+  5    l.course_name,
+  6    c.courseName,
+  7    c.periods
+  8  FROM 
+  9    student1 s
+ 10  LEFT JOIN 
+ 11    lectures1 l ON s.StId = l.StId
+ 12  LEFT JOIN 
+ 13    course1 c ON s.StId = c.StId;
+
+    StId Name                lectures_name     course_name       courseName   periods   
+  ------ ------------------- ----------------- ----------------- ----------- ----------- 
+   1001 John                Math 101         Algebra           Algebra      10 weeks    
+   1002 Alice               Physics 101      Mechanics         Mechanics    12 weeks    
+   1003 Robert              Chemistry 101    Organic Chemistry  Organic      8 weeks     
+   1004 Emma                NULL             NULL              NULL        NULL 
 
 
 
