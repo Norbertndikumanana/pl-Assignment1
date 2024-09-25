@@ -114,6 +114,7 @@ SQL> update student1 set Deptid=03  where stid=2004;
 SQL> update student1 set Deptid=03  where stid=2002;
 
 1 row updated.
+![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 
 
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 200 ,'Patric', 2000,'pl1');
