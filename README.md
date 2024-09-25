@@ -83,6 +83,14 @@ SQL> select * from department1;
 SQL> create table Student1( StId number(4) primary key, Name varchar(20) , DeptId number(4), foreign key(DeptId) references department1(DeptId));
 
 Table created.
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STID                                      NOT NULL NUMBER(4)
+ NAME                                               VARCHAR2(20)
+ DEPTID                                             NUMBER(4)
+ COURSENAME                                         VARCHAR2(10)
+
 inserting in student
 
 SQL> insert into student1(stid,name,deptid,coursename) values ( 2001 ,'kev', '','');
@@ -93,17 +101,19 @@ SQL> insert into student1(stid,name,deptid,coursename) values ( 2002 ,'Ezra', ''
 
 1 row created.
 
-SQL> create table lectures1(lecturesId number(4) primary key , lectures_name varchar(20), StId number(4), course_name varchar(20) ,foreign key (StId) references student1(StId));
-inserting values
-SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 100 ,'Eric', 2000,'pl');
+SQL> select* from student1;
 
-1 row created.
-updating
-// here we just inserting values in the tables we had foreign key which are empty so we are just updating by initialising data 
+      STID NAME                     DEPTID COURSENAME
+---------- -------------------- ---------- ----------
+      2000 Alain
+      2001 kev
+      2002 Ezra
+      2003 cedro
+      2004 cedro
 
-SQL> update student1 set Deptid=01  where stid=2000;
+      SQL> update student1 set Deptid=01  where stid=2000;
 
-1 row updated.
+
 
 SQL> update student1 set Deptid=02  where stid=2001;
 
@@ -120,9 +130,43 @@ SQL> update student1 set Deptid=03  where stid=2004;
 SQL> update student1 set Deptid=03  where stid=2002;
 
 1 row updated.
+// here we updated the deptid
+SQL> select * from student1;
+
+      STID NAME                     DEPTID COURSENAME
+---------- -------------------- ---------- ----------
+      2000 Alain                         1
+      2001 kev                           2
+      2002 Ezra                          3
+      2003 cedro                         3
+      2004 cedro                         3
+
+    
+#Differences
+
+SQL> select* from student1;
+
+      STID NAME                     DEPTID COURSENAME
+---------- -------------------- ---------- ----------
+      2000 Alain
+      2001 kev
+      2002 Ezra
+      2003 cedro
+      2004 cedro
+
+      SQL> update student1 set Deptid=01  where stid=2000;
+      
 ![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 
 
+SQL> create table lectures1(lecturesId number(4) primary key , lectures_name varchar(20), StId number(4), course_name varchar(20) ,foreign key (StId) references student1(StId));
+inserting values
+SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 100 ,'Eric', 2000,'pl');
+
+1 row created.
+updating
+// here we just inserting values in the tables we had foreign key which are empty so we are just updating by initialising data
+ 
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 200 ,'Patric', 2000,'pl1');
 
 1 row created.
@@ -142,6 +186,22 @@ SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 1
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 103 ,'Eric', 2004,'pl');
 
 1 row created.
+SQL> select * from lectures1;
+
+LECTURESID LECTURES_NAME              STID COURSE_NAME
+---------- -------------------- ---------- --------------------
+       100 Eric                       2000 pl
+       200 Patric                     2000 pl1
+       201 Patric                     2001 pl1
+       101 Patric                     2002 pl
+       102 Eric                       2003 pl
+       103 Eric                       2004 pl
+       300 Joshua                     2004 Net
+       301 Joshua                     2000 Net
+       302 Joshua                     2001 Net
+       304 Joshua                     2002 Net
+
+#screenshot
 
 Table created.
 SQL> create table course1(courseName varchar(10) primary key , periods varchar(20), StId number(4), lectureseId number(4) ,foreign key (StId) references student1(StId));
