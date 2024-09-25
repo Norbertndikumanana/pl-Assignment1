@@ -2,7 +2,11 @@
 i create database system of school recordinf in four entity { lecture1 ,course1, depatrment1 and student1} and due to that database we have used to insert update delete and other all 
 commands like inner oin cross join so it due to this relational diagram
 ![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
+
+
 // Here are all four creating tables
+
+
 ![creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
 SQL> desc depatrment1;
