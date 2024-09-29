@@ -1,16 +1,16 @@
                                                                                # pl-Assignment1
-PROBLEM: 
+--PROBLEM: 
 
-I create database system of school recordinf in four entity { lecture1 ,course1, depatrment1 and student1} and due to that database we have used to insert update delete and other all 
+--I create database system of school recordinf in four entity { lecture1 ,course1, depatrment1 and student1} and due to that database we have used to insert update delete and other all 
 commands like inner oin cross join so it due to this relational diagram.
 
-![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
+--![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
 
 
-// Here are all four creating tables
+--// Here are all four creating tables
 
 
-![creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
+--![creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
 SQL> desc depatrment1;
  Name                                      Null?    Type
@@ -159,7 +159,7 @@ SQL> select* from student1;
 
       SQL> update student1 set Deptid=01  where stid=2000;
       
-![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
+--![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 
 
 SQL> create table lectures1(lecturesId number(4) primary key , lectures_name varchar(20), StId number(4), course_name varchar(20) ,foreign key (StId) references student1(StId));
@@ -167,8 +167,10 @@ inserting values
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 100 ,'Eric', 2000,'pl');
 
 1 row created.
-updating
-// here we just inserting values in the tables we had foreign key which are empty so we are just updating by initialising data
+
+
+--updating
+--// here we just inserting values in the tables we had foreign key which are empty so we are just updating by initialising data
  
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 200 ,'Patric', 2000,'pl1');
 
@@ -204,8 +206,8 @@ LECTURESID LECTURES_NAME              STID COURSE_NAME
        302 Joshua                     2001 Net
        304 Joshua                     2002 Net
 
-#screenshot
-![lectures](https://github.com/user-attachments/assets/8e2f6749-5790-4a92-b754-06a47871179c)
+--#screenshot
+--![lectures](https://github.com/user-attachments/assets/8e2f6749-5790-4a92-b754-06a47871179c)
 
 
 Table created.
