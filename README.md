@@ -6,7 +6,7 @@ commands like inner oin cross join so it due to this relational diagram.
 
 --![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
 
-
+ 
 --// Here are all four creating tables
 
 
