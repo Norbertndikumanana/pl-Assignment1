@@ -222,7 +222,7 @@ LECTURESID LECTURES_NAME              STID COURSE_NAME
        301 Joshua                     2000 Net
        302 Joshua                     2001 Net
        304 Joshua                     2002 Net
-
+```
 --#screenshot
 --![lectures](https://github.com/user-attachments/assets/8e2f6749-5790-4a92-b754-06a47871179c)
 ##### Creating,updating and inserting table course1
