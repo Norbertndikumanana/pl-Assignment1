@@ -1,5 +1,5 @@
                                                                                # pl-Assignment1
-###Case Study: 
+### Case Study: 
 
 --I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
 commands like inner oin cross join so it due to this relational diagram.
@@ -32,7 +32,7 @@ Table altered.
 ```
 
 ##### inserting values
-```
+```sql
 SQL> insert into department1(Deptid,lecturesId,stid) values ( 03 ,'', 2002);
 
 1 row created.
@@ -56,7 +56,7 @@ SQL> select * from department1;
          5                  2004
 ```
 ##### Updating
-```
+```sql
 SQL> update department1 set lecturesid = '100'  where deptid=1;
 
 1 row updated.
@@ -93,7 +93,7 @@ SQL> select * from department1;
 
 ```
 ##### creating table student
-```
+```sql
 SQL> create table Student1( StId number(4) primary key, Name varchar(20) , DeptId number(4), foreign key(DeptId) references department1(DeptId));
 
 Table created.
@@ -104,9 +104,10 @@ SQL> desc student1;
  NAME                                               VARCHAR2(20)
  DEPTID                                             NUMBER(4)
  COURSENAME                                         VARCHAR2(10)
+```
 
-inserting in student
-
+##### inserting in student
+```sql
 SQL> insert into student1(stid,name,deptid,coursename) values ( 2001 ,'kev', '','');
 
 1 row created.
@@ -124,6 +125,9 @@ SQL> select* from student1;
       2002 Ezra
       2003 cedro
       2004 cedro
+```
+##### Updating
+```sql
 
       SQL> update student1 set Deptid=01  where stid=2000;
 
@@ -171,6 +175,7 @@ SQL> select* from student1;
       SQL> update student1 set Deptid=01  where stid=2000;
 ```
       
+##### Screenshot
 --![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 
 
