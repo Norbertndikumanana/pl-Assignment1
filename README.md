@@ -1,8 +1,8 @@
                                                                                # pl-Assignment1
 ### Case Study: 
 
---I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
-commands like inner oin cross join so it due to this relational diagram.
+######I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
+commands like inner join cross join so it due to this relational diagram.
 
 --![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
 
@@ -10,7 +10,7 @@ commands like inner oin cross join so it due to this relational diagram.
 ### Here are all four creating tables
 
 
-####SCREENSHOT
+#####SCREENSHOT
 [creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
 ```sql
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
@@ -177,8 +177,8 @@ SQL> select* from student1;
       
 ##### Screenshot
 --![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
-
-
+##### Creating , inserting updating Deleting into table Lecture1
+```spl
 SQL> create table lectures1(lecturesId number(4) primary key , lectures_name varchar(20), StId number(4), course_name varchar(20) ,foreign key (StId) references student1(StId));
 inserting values
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 100 ,'Eric', 2000,'pl');
