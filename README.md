@@ -11,7 +11,7 @@ commands like inner oin cross join so it due to this relational diagram.
 
 
 --![creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
---- sql
+```sql
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
 SQL> desc depatrment1;
  Name                                      Null?    Type
@@ -159,6 +159,7 @@ SQL> select* from student1;
       2004 cedro
 
       SQL> update student1 set Deptid=01  where stid=2000;
+```
       
 --![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 
