@@ -1,5 +1,5 @@
                                                                                # pl-Assignment1
-# case study: 
+###Case Study: 
 
 --I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
 commands like inner oin cross join so it due to this relational diagram.
@@ -7,10 +7,11 @@ commands like inner oin cross join so it due to this relational diagram.
 --![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
 
  
---// Here are all four creating tables
+### Here are all four creating tables
 
 
---![creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
+####SCREENSHOT
+[creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
 ```sql
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
 SQL> desc depatrment1;
@@ -22,11 +23,16 @@ SQL> desc depatrment1;
 
 
 Table created.
+```
+##### Adding foreign key constarint
+```sql
 SQL> alter table department1 add constraint fkl foreign key (lecturesId) references lectures1 (lecturesId);
 
 Table altered.
-inserting values
+```
 
+##### inserting values
+```
 SQL> insert into department1(Deptid,lecturesId,stid) values ( 03 ,'', 2002);
 
 1 row created.
@@ -48,8 +54,9 @@ SQL> select * from department1;
          3                  2002
          4                  2003
          5                  2004
-updating
-
+```
+##### Updating
+```
 SQL> update department1 set lecturesid = '100'  where deptid=1;
 
 1 row updated.
@@ -84,6 +91,9 @@ SQL> select * from department1;
          4        301       2003
          5        300       2004
 
+```
+##### creating table student
+```
 SQL> create table Student1( StId number(4) primary key, Name varchar(20) , DeptId number(4), foreign key(DeptId) references department1(DeptId));
 
 Table created.
