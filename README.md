@@ -563,12 +563,13 @@ SQL> SELECT
 
     StId Name                lectures_name     course_name       courseName   periods   
   ------ ------------------- ----------------- ----------------- ----------- ----------- 
-   1001 John                Math 101         Algebra           Algebra      10 weeks    
-   1002 Alice               Physics 101      Mechanics         Mechanics    12 weeks    
-   1003 Robert              Chemistry 101    Organic Chemistry  Organic      8 weeks     
-   1004 Emma                NULL             NULL              NULL        NULL 
+   1001 cedro                ERIC                  PL             PL1         4-periods
+   1002 pedro                Joshua              NET              NET         3-periods   
+   1003 kev                  Turiho              DBMS             DB           4-periods     
+   1004 cedro                MANARIHO           NULL              NULL        NULL 
 
 ```
 
 
 
+-
