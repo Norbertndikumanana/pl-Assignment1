@@ -178,7 +178,7 @@ SQL> select* from student1;
 ##### Screenshot
 --![updating in student111](https://github.com/user-attachments/assets/70c6f3ee-72c4-4860-9a02-c5a14cd6fb74)
 ##### Creating , inserting updating Deleting into table Lecture1
-```spl
+```sql
 SQL> create table lectures1(lecturesId number(4) primary key , lectures_name varchar(20), StId number(4), course_name varchar(20) ,foreign key (StId) references student1(StId));
 inserting values
 SQL> insert into lectures1(lecturesid,lectures_name,stid,course_name) values ( 100 ,'Eric', 2000,'pl');
