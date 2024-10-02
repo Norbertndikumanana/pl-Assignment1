@@ -225,8 +225,8 @@ LECTURESID LECTURES_NAME              STID COURSE_NAME
 
 --#screenshot
 --![lectures](https://github.com/user-attachments/assets/8e2f6749-5790-4a92-b754-06a47871179c)
-
-
+##### Creating,updating and inserting table course1
+```sql 
 Table created.
 SQL> create table course1(courseName varchar(10) primary key , periods varchar(20), StId number(4), lectureseId number(4) ,foreign key (StId) references student1(StId));
 
@@ -273,9 +273,10 @@ COURSENAME PERIODS                    STID LECTURESEID
  pl        4-periods                  2000         100
  pl1       4-periods                  2001         101
  pl2       4-periods                  2002         101
+```
 
-##joining 
-by inner joining student and departement
+##### Joining 
+```sql
 
 
 SELECT Student1.StId, Student1.Name, department1.DeptId, department1.lecturesId
@@ -567,7 +568,7 @@ SQL> SELECT
    1003 Robert              Chemistry 101    Organic Chemistry  Organic      8 weeks     
    1004 Emma                NULL             NULL              NULL        NULL 
 
-
+```
 
 
 
