@@ -10,7 +10,8 @@
 
 
 ##### SCREENSHOT
-[creating tables](https://github.com/user-attachments/assets/f8577da6-6ad3-435d-8d6f-ff9b5d0d9cdd)
+![creating tables](https://github.com/user-attachments/assets/af09cd2d-8c4f-4547-b909-832eba947220)
+##### creating table departmenr1
 ```sql
 SQL> create table department1(DeptId number(4) primary key,lecturesId number(4),StId number(4)  );
 SQL> desc depatrment1;
