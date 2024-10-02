@@ -1,7 +1,7 @@
                                                                                # pl-Assignment1
 ### Case Study: 
 
-######I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
+###### I create database system management system of school recording in four entity { lecture ,course, depatrment and student} and due to that database we have used to insert update delete and other all 
 commands like inner join cross join so it due to this relational diagram.
 
 --![Relational_1](https://github.com/user-attachments/assets/3e10ba20-c166-4030-ad9a-0edad17d681c)
